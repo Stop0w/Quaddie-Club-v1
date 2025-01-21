@@ -1,0 +1,38 @@
+@keyframes horseshoeRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.horseshoe-spin {
+  animation: horseshoeRotate 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes accordionEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordion-enter {
+  animation: accordionEnter 0.3s ease-out;
+}
+
+/* Mobile-specific animations */
+@media (max-width: 768px) {
+  .horseshoe-spin {
+    animation-duration: 0.8s;
+  }
+  
+  .accordion-enter {
+    animation-duration: 0.25s;
+  }
+}
